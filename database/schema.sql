@@ -28,3 +28,36 @@ insert into Hotels (HotelName, Address, Contactno, Package01, Price01, Package02
     FOREIGN KEY (BookingID) REFERENCES Booking(BookingID),
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 );
+
+create table photography (
+   StudioId int auto_increment primary key,
+   CustomerID INT,
+   StudioName varchar(50),
+   location varchar(50),
+   Contactno char(10),
+   Price01 decimal(10,2)
+   );
+    
+insert into photography (StudioName, location, Contactno,  Price01 )
+   values 
+   ('Jhethro Studio', 'Maharagama', '0712345678',  130000.00),
+   ('Sithuwam Studio', 'Nugegoda', '0764543802', 160000.00),
+   ('PixelCraft Studio', 'Kirulapana', '0725643330', 145000.00),
+   ('Studio Vision', 'Wijerama', '0713943300',  110000.00);
+    
+create table decorations (
+   DShopId int auto_increment primary key,
+   CustomerID INT,
+   DShopName varchar(50),
+   location varchar(50),
+   Contactno char(10),
+   Price01 decimal(10,2),
+   Price02 decimal(10,2)
+  );
+    
+insert into decorations ( DShopName, location, Contactno,  Price01, Price02 )
+   values 
+   ('Lassana Flora', 'nugegoda', '0714456658',  100000.00, 80000.00),
+   ('Lumos Events', 'maharagama','0765345608', 120000.00, 90000.00),
+   ('KOLIN’s ', 'kirulapana', '0714566367', 125000.00, 85000.00),
+   ('90F Weddings', 'Wijerama', '0714456658', 95000.00, 75000.00);
