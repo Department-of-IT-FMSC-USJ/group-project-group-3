@@ -1,0 +1,95 @@
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://tse4.mm.bing.net/th/id/OIP.ikVAqH82qQQl7RAfoxtojwHaLH?w=800&h=1200&rs=1&pid=ImgDetMain&o=7&rm=3');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Soft transparent overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); 
+            z-index: -1;
+        }
+
+        /* Headings */
+        h1, h2{
+            text-align: center;
+            color: black;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+            margin: 10px 0;
+            background-color:pink;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 40px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        /* Category grid */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 30px;
+            background-color: rgba(255, 182, 193, 0.85); 
+            margin: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Category items */
+        .category-item {
+            text-decoration: none;
+            color: #333;
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+        }
+
+        .category-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .category-icon img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .category-item h3 {
+            color: #ff80ab;
+            margin: 12px 0;
+            font-weight: 600;
+        }
+        
+        footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ff99bb; 
+    color: #ffffff; 
+    font-weight: 500;
+    border-top: 2px solid rgba(0,0,0,0.1);
+}
