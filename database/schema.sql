@@ -69,3 +69,27 @@ insert into decorations ( DShopName, location, Contactno,  Price01, Price02 )
    ('Lumos Events', 'maharagama','0765345608', 120000.00, 90000.00),
    ('KOLIN’s ', 'kirulapana', '0714566367', 125000.00, 85000.00),
    ('90F Weddings', 'Wijerama', '0714456658', 95000.00, 75000.00);
+   
+CREATE TABLE Booking (
+    BookingID INT AUTO_INCREMENT PRIMARY KEY,
+    CustomerID INT,
+    BookingDate DATE,
+    HotelNo INT,
+    StudioId INT,
+    SalonNo INT,
+    DshopId INT,
+    GshopID int,
+    CshopID int,
+    shopid int,
+    BshopID int,
+    Status VARCHAR(20) DEFAULT 'Pending',
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (HotelNo) REFERENCES Hotels(HotelNo),
+    FOREIGN KEY (StudioId) REFERENCES photography(StudioId),
+    FOREIGN KEY (SalonNo) REFERENCES Salons(SalonNo),
+    FOREIGN KEY (DshopId) REFERENCES decorations(DShopId),
+    FOREIGN KEY (GshopID) REFERENCES GroomDresses(GshopID),
+    FOREIGN KEY (CshopID) REFERENCES Cakes(CShopID),
+    FOREIGN KEY (shopid) REFERENCES jewelery(shopid),
+    FOREIGN KEY (BshopID) REFERENCES bridaldress(BshopID)
+);
